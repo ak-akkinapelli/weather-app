@@ -1,6 +1,7 @@
 const submit = document.getElementById("submit_button");
 const input = document.getElementById("input_value");
 const currentWeatherItems = document.getElementById("current-weather");
+const error = document.getElementById("error");
 
 const weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=";
@@ -22,7 +23,14 @@ let weatherData = {
   Sunrise: null,
   Sunset: null,
 };
+
+window.onload = () => {
+  input.value = "New York";
+  getCurrentData();
+};
+
 const getCurrentData = () => {
+  error.innerHTML = "";
   fetch(`${weatherURL}${input.value}&units=metric&appid=${API_key}`)
     .then((response) => response.json())
     .then((data) => {
@@ -39,10 +47,11 @@ const getCurrentData = () => {
       weatherData.Sunset = data["sys"]["sunset"];
       getforecastData();
     })
-    .catch((e) => console.log(e));
+    .catch((e) => (error.innerHTML = "Enter a valid city name"));
 };
 
 const getforecastData = () => {
+  error.innerHTML = "";
   fetch(`${forecastURL}${input.value}&units=metric&cnt=7&appid=${API_key}`)
     .then((response) => response.json())
     .then((data) => {
@@ -57,7 +66,7 @@ const getforecastData = () => {
 
       input.value = "";
     })
-    .catch((e) => console.log(e));
+    .catch((e) => console.log((error.innerHTML = "something went wrong")));
 };
 
 const timeConversion = (unix_timestamp) => {
