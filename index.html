@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h2>Weather App</h2>
+
+        <div>
+          <input
+            type="text"
+            placeholder="Enter the city name"
+            id="input_value"
+            class="input"
+          />
+          <button type="submit" id="submit_button">Go</button>
+        </div>
+      </div>
+      <div class="components">
+        <div class="none" id="forecast">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="none" id="current-weather"></div>
+      </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+<!--  .components {
+        display: block;
+    }
+
+    .current {
+        width: 92vw;
+        height: 30vh;
+    }
+
+    .future-forecast {
+        width: 92vw;
+        height: 32vh;
+    } -->

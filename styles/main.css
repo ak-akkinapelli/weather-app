@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: url('https://images.unsplash.com/photo-1544656376-ffe19d4b7353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    padding: 20px 70px;
+    color:#fff;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+}
+::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  button{
+    position: relative;
+    display: flex;
+    min-width: 3rem;
+    min-height: 2rem;
+    margin: 0 1rem;
+    align-items: center;
+    background-color: #fff;
+    margin: 5px;
+    border: 0.2rem solid white;
+    justify-content: center;
+  }
+.none {
+   visibility: hidden;
+}
+
+.components
+{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin-top: 10%;
+}
+.current{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+    width: 30vw;
+    height: 40vh;
+}
+
+.current .weather-item{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.current .weather-item img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.future-forecast
+{
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(244, 239, 239, 0.7);
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 30px;
+    height: 15px;
+    background: grey;
+    display: block;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 14px;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: #bd3d13;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 130px;
+  }
