@@ -90,7 +90,7 @@ const appendValues = () => {
 </div>
 <div class="weather-item">
    <div>Climate</div>
-   <div>${weatherData.climateDescription}
+   <div class="climate">${weatherData.climateDescription}
       <img src="https://openweathermap.org/img/w/${weatherData.icon}.png">
    </div>
 </div>
@@ -143,13 +143,13 @@ const appendValues = () => {
 
 const chart = () => {
   const labels = [
-    `${date.getDate()}/${date.getMonth() + 1}`,
-    `${date.getDate() + 1}/${date.getMonth() + 1}`,
-    `${date.getDate() + 2}/${date.getMonth() + 1}`,
-    `${date.getDate() + 3}/${date.getMonth() + 1}`,
-    `${date.getDate() + 4}/${date.getMonth() + 1}`,
-    `${date.getDate() + 5}/${date.getMonth() + 1}`,
-    `${date.getDate() + 6}/${date.getMonth() + 1}`,
+    `${date.getDate()}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 1}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 2}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 3}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 4}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 5}/0${date.getMonth() + 1}`,
+    `${date.getDate() + 6}/0${date.getMonth() + 1}`,
   ];
 
   const data = {
